@@ -5,8 +5,8 @@ respond to the following questions.
 
 In your responses, be sure to cite any relevant sources you consulted in your
 search. We ask you to write responses in your own words in order to see how you
-process what you've read. Please do not respond with direct quotes from source
-material. Instead, digest what you've read and repeat it in your own voice.
+process what you"ve read. Please do not respond with direct quotes from source
+material. Instead, digest what you"ve read and repeat it in your own voice.
 
 ## Required Reading
 
@@ -50,7 +50,34 @@ A kitchen has many items.
     rack, and cinnamon, nutmeg, and vanilla on another shelf.
 
 ```json
-<!-- your answer here -->
+{ [
+  "itemName": "bowl",
+},
+{
+  "itemName": "plates",
+]}
+
+{[
+        "burner": "small",
+    },
+    {
+        "burner": "medium",
+    },
+    {
+        "burner": "large",
+    },
+    {
+        "burner": "extraLarge",
+  ]};
+
+{[
+  "shelfRackOne": {"spice1": "chives", "spice2": "lemon grass", "spice3": "mint"}
+  }
+  {
+  "shelfRackTwo": {"spice1": "nutmeg", "spice2": "cinnamon", "spice3": "vanilla" }
+  }
+]}
+
 ```
 
 ## Modeling Data Using JSON: Part II
@@ -62,7 +89,11 @@ delicious apple.
 Copy the JSON that you wrote for the previous question and include the new information about the kitchen.
 
 ```json
-<!-- your answer here -->
+var apples  = {"Apples": [ {"type":"Fujii",  "quantity":2},
+             {"type":"Gala",   "quantity":7},
+             {"type":"Golden", "quantity":1}
+           ]
+ }
 ```
 
 ## JSON Methods
@@ -70,7 +101,8 @@ Copy the JSON that you wrote for the previous question and include the new infor
 Can you write a method in the JSON that you wrote above?
 
 ```json
-<!-- your answer here -->
+var obj = JSON.parse(apples)
+console.log("Apple Type: "+obj.Apples[0].type + "quantity: "+obj.Apples[0].quantity )
 ```
 
 ## JSON Comments
